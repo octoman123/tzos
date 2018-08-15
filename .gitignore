@@ -1,0 +1,6 @@
+bochslog.txt
+bin/kernel.o
+bin/kernel.elf
+stage2_eltorito
+bin/os.iso
+iso/boot/grub/menu.lst
