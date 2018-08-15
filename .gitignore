@@ -5,3 +5,4 @@ stage2_eltorito
 bin/os.iso
 iso/boot/grub/menu.lst
 iso/boot/kernel.elf
+bin/kernel_loader.o
