@@ -1,4 +1,4 @@
-global kernel
+global loader
 
 MAGIC_NUMBER equ 0x1BADB002
 FLAGS        equ 0x0
@@ -11,7 +11,7 @@ align 4
     dd FLAGS
     dd CHECKSUM
 
-kernel:
+loader:
     mov eax, 0xCAFEBABE
 .loop:
     jmp .loop

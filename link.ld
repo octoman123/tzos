@@ -1,26 +1,26 @@
-ENTRY(kernel) /* what to load at */
+ENTRY(loader) /* what to load at */
 
 SECTIONS {
     . = 0x00100000; /* load the code at this memory address for grub to find */
 
-    .text ALIGN (0x10000): /* align at 4kb */
+    .text ALIGN (0x1000) :   /* align at 4 KB */
     {
-        *.(text)
+        *(.text)             
     }
 
-    .rodata ALIGN (0x1000):
+    .rodata ALIGN (0x1000) : /* align at 4 KB */
     {
-        *(.rodata*)
+        *(.rodata*)          
     }
 
-    .data ALIGN (0x1000):
+    .data ALIGN (0x1000) :   /* align at 4 KB */
     {
-        *(.data)
+        *(.data)             
     }
 
-    .bss ALIGN (0x1000):
+    .bss ALIGN (0x1000) :    /* align at 4 KB */
     {
-        *(COMMON)
-        *(.bss)
+        *(COMMON)           
+        *(.bss)             
     }
 }

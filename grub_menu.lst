@@ -1,5 +1,5 @@
 default=0
 timeout=0
 
-tite os
+title TZOS
 kernel /boot/kernel.elf
